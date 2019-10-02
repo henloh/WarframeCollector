@@ -25,7 +25,6 @@ Pull requests are welcome. Please open an issues first to discuss what you would
 
 ## Plans
 I would like to publish the app on a website so you dont have to run it local. 
---Please consider donating to found the server. Small --donations already help, 1gb of storage can support arround 12000 users.
 
 If you have experience with scaled up node.js servers please let me know.
 
