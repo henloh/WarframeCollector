@@ -31,4 +31,4 @@ If you have experience with scaled up node.js servers please let me know.
 ## License
 Quick summary: NonCommercial use and you can share it under the same conditions.
 
-[CC - License]()
+[CC - License](https://raw.githubusercontent.com/henloh/WarframeCollector/master/license.txt)
