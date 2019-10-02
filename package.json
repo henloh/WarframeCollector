@@ -1,0 +1,16 @@
+{
+    "name": "Collector",
+    "description": "The Collector",
+    "version": "0.0.1",
+    "main": "Server.js",
+    "dependencies": {
+        "express": "3.x",
+        "sequelize":"latest",
+        "q":"latest",
+        "tedious":"latest",
+        "angular":"latest",
+        "angular-ui-router": "~0.2.11",
+        "path":"latest",
+        "dat-gui":"latest"
+    }
+}

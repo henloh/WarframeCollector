@@ -1,0 +1,157 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "com.warframe.my-apps.Collector",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{title}}",
+		"description": "{{title}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"Collector": {
+				"uri": "/odata",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml",
+					"annotations": []
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_hcb", "sap_belize"]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.warframe.my-apps.Collector.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": false,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.warframe.my-apps.Collector.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Request",
+                    "useBatch" : false
+				},
+				"dataSource": "Collector"
+			}
+		},
+		"resources": {
+			"css": [],
+			"js": []
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.warframe.my-apps.Collector.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl",
+				"clearControlAggregation": false,
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"name": "Main",
+					"pattern": "/",
+					"target": [
+						"Main"
+					]
+				},
+				{
+					"name": "RouteForge",
+					"pattern": "/Forge",
+					"target": [
+						"Forge"
+					]
+				},
+				{
+					"name": "RouteCreation",
+					"pattern": "/Creation",
+					"target": [
+						"Creation"
+					]
+                },
+				{
+					"name": "RouteTest",
+					"pattern": "/Test",
+					"target": [
+						"Test"
+					]
+                }
+            ],
+			"targets": {
+				"Main": {
+					"viewType": "XML",
+					"viewName": "Main",
+					"viewLevel": 1
+				},
+				"Creation": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Creation",
+					"viewLevel": 2
+				},
+				"Test": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Test",
+					"viewLevel": 2
+				},
+				"Import": {
+					"viewType": "XML",
+					"viewName": "Forge",
+					"transition": "slide",
+					"viewLevel": 2
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"viewId": "notFound"
+				}
+			}
+		}
+	}
+}

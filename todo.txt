@@ -1,0 +1,19 @@
+3.  Install BAT schreiben -> maybe Virtualbox zum testen
+4.  Query, Insert, Update, Delete schreiben. 
+5.  Startfile (App starten und öffnen)
+
+_________DONE___________
+
+x   Download files from Github. Lokal speichern für zugriff. 
+    Nodeapp muss Downloaden nach Event im UI5
+x   Files für Daten aufbauen aus Originalen Dateien
+x   oData Service über Nodejs einsetzen (simple-odata-service)
+x   userInit schreiben. Jeden Part checken ob bereits vorhanden wegen
+    kommenden updates. Nur lesen wenn file vorhanden
+x   Flexible column Layout übernehmen
+x   UserNameSets.json generieren mit FullSet Count. 
+    Beim Update der Items muss FullSets gecheckt werden ob eins voll wird.
+    FullSet als extra Entity modellieren.#
+x   Beim öffnen letzten User checken. // Default wird es immer geben
+    Wenn keiner vorhanden dann zu den
+    Settings navigieren. (User in global Model setzen)
